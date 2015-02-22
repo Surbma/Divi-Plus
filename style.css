@@ -1,12 +1,10 @@
 /*
 Theme Name: Divi Extra
-Version: 1.0.0
+Version: 1.1.0
 Author: Surbma
 Author URI: http://surbma.com
 
 Template: Divi
 */
 
-.error404 #main-content .container:before {display: none;}
-.error404.et_right_sidebar #left-area {float: none;width: 100%;margin-right: 0;}
-.et_404_widget {margin: 0 0 30px;}
+@import url("css/divi-extra.css");
