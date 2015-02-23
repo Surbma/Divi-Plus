@@ -1,8 +1,8 @@
 # Divi Extra
 
-__A ChildTheme for Divi Theme by Elegant Themes__
+__A Child Theme for Divi Theme by Elegant Themes__
 
-This childtheme fixes and adds some useful modifications to the Divi Theme:
+This child theme fixes and adds some useful modifications to the Divi Theme:
 
 - Line height fix for headers.
 - Better footer display.
