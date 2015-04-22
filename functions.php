@@ -1,17 +1,11 @@
 <?php
 
-// Enqueue the Divi css file
+// Enqueue css files
 function divi_extras_enqueue_scripts() {
-	wp_enqueue_style( 'divi', get_template_directory_uri() . '/style.css', false, '2.3.1' );
+	wp_enqueue_style( 'divi', get_template_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'divi-extra', get_stylesheet_directory_uri() . '/css/divi-extra.css', false, '2.0.0' );
 }
 add_action( 'wp_enqueue_scripts', 'divi_extras_enqueue_scripts' );
-
-// Remove comment form allowed tags
-function divi_extra_remove_comment_form_allowed_tags( $defaults ) {
-	$defaults['comment_notes_after'] = '';
-	return $defaults;
-}
-add_filter( 'comment_form_defaults', 'divi_extra_remove_comment_form_allowed_tags' );
 
 // Add 404 widget position
 function divi_extra_widgets_init() {
