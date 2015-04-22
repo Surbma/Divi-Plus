@@ -1,7 +1,7 @@
 Divi Extra
 ==================
 
-== A Child Theme for the Divi Theme by Elegant Themes ==
+__A Child Theme for the Divi Theme by Elegant Themes__
 
 **Child theme features:**
 
