@@ -4,9 +4,8 @@
 	<div class="container">
 		<div id="content-area" class="clearfix">
 			<div id="left-area">
-			<div class="archive-info">
-				<h1 class="archive-title"># <?php single_term_title(); ?></h1>
-				<div class="archive-description"><?php echo term_description(); ?></div>
+			<div class="search-info">
+				<h1 class="search-title"># <?php echo $s ?></h1>
 			</div>
 		<?php
 			if ( have_posts() ) :
