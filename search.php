@@ -10,7 +10,7 @@
 		<?php
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post();
-					$post_format = get_post_format(); ?>
+					$post_format = et_pb_post_format(); ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'et_pb_post' ); ?>>
 
@@ -52,11 +52,9 @@
 
 					<?php
 						et_divi_post_meta();
-						echo '<div class="post-content">';
-							if ( 'on' !== et_get_option( 'divi_blog_style', 'false' ) || ( is_search() && ( 'on' === get_post_meta( get_the_ID(), '_et_pb_use_builder', true ) ) ) )
-								truncate_post( 270 );
-							else
-								the_content();
+						
+						echo '<div class="entry-content">';
+							truncate_post( 270 );
 						echo '</div>';
 					?>
 				<?php endif; ?>

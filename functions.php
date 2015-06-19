@@ -2,9 +2,14 @@
 
 // Replace default stylesheet
 function divi_extras_default_stylesheet() {
-	return get_stylesheet_directory_uri() . '/divi-extra.css';
+	return get_template_directory_uri() . '/style.css';
 }
 add_filter( 'stylesheet_uri', 'divi_extras_default_stylesheet', 10, 2 );
+
+function divi_extras_enqueues() {
+	wp_enqueue_style( 'divi-extra', get_stylesheet_directory_uri() . '/css/divi-extra.css' );
+}
+add_action( 'wp_enqueue_scripts', 'divi_extras_enqueues', 20 );
 
 // Add 404 widget position
 function divi_extra_widgets_init() {
