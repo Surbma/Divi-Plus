@@ -1,5 +1,5 @@
-Divi Extra
-==================
+Divi Plus
+=========
 
 __A Child Theme for the Divi Theme by Elegant Themes__
 
