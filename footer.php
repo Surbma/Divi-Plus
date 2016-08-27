@@ -36,7 +36,8 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 						get_template_part( 'includes/social_icons', 'footer' );
 					}
 				?>
-						<p id="footer-info"><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>"><?php bloginfo( 'name' ); ?></a><?php if ( defined( 'DIVI_PLUS_FOOTER_CREDS' ) ) echo DIVI_PLUS_FOOTER_CREDS; ?></p>
+						<?php $options = get_option( 'pwp_control_option' ); ?>
+						<p id="footer-info"><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>"><?php bloginfo( 'name' ); ?></a><?php if ( $options['backlink'] != '1' && defined( 'DIVI_PLUS_FOOTER_CREDS' ) ) echo DIVI_PLUS_FOOTER_CREDS; ?></p>
 					</div>	<!-- .container -->
 				</div>
 			</footer> <!-- #main-footer -->
