@@ -35,9 +35,32 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 					if ( false !== et_get_option( 'show_footer_social_icons', true ) ) {
 						get_template_part( 'includes/social_icons', 'footer' );
 					}
+
+					$options = get_option( 'pwp_control_option' );
+					$divi_plus_footer_credits = '';
+					if ( $options['backlink'] != '1' && defined( 'DIVI_PLUS_FOOTER_CREDS' ) ) $divi_plus_footer_credits = DIVI_PLUS_FOOTER_CREDS;
+
+					$divi_plus_default_footer_credits = '<a href="' . get_bloginfo( 'url' ) . '" title="' . get_bloginfo( 'name' ) . ' - ' . get_bloginfo( 'description' ) . '">' . get_bloginfo( 'name' ) . '</a>';
+
+					$disable_custom_credits = et_get_option( 'disable_custom_footer_credits', false );
+
+					$divi_footer_credits = et_get_option( 'custom_footer_credits', '' );
+
+					$credits_format = '<p id="footer-info">%1$s</p>';
+
+					if ( $disable_custom_credits ) {
+						$footer_credits = $divi_plus_footer_credits;
+					}
+					elseif ( '' === trim( $divi_footer_credits ) ) {
+						$footer_credits = $divi_plus_default_footer_credits . $divi_plus_footer_credits;
+					}
+					else {
+						$footer_credits = $divi_footer_credits . $divi_plus_footer_credits;
+					}
+
+					$final_footer_credits = et_get_safe_localization( sprintf( $credits_format, $footer_credits ) );
+					echo $final_footer_credits;
 				?>
-						<?php $options = get_option( 'pwp_control_option' ); ?>
-						<p id="footer-info"><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>"><?php bloginfo( 'name' ); ?></a><?php if ( $options['backlink'] != '1' && defined( 'DIVI_PLUS_FOOTER_CREDS' ) ) echo DIVI_PLUS_FOOTER_CREDS; ?></p>
 					</div>	<!-- .container -->
 				</div>
 			</footer> <!-- #main-footer -->
