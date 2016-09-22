@@ -1,11 +1,20 @@
 <?php get_header(); ?>
 
+<?php
+if ( is_category() || is_tag() || is_tax() ) {
+	$archive_title = single_term_title( '# ', false );
+}
+else {
+	$archive_title = post_type_archive_title( '# ', false );
+}
+?>
+
 <div id="main-content">
 	<div class="container">
 		<div id="content-area" class="clearfix">
 			<div id="left-area">
 			<div class="archive-info">
-				<h1 class="archive-title"># <?php single_term_title(); ?></h1>
+				<h1 class="archive-title"><?php echo $archive_title; ?></h1>
 				<div class="archive-description"><?php echo term_description(); ?></div>
 			</div>
 		<?php
@@ -53,7 +62,7 @@
 
 					<?php
 						et_divi_post_meta();
-						
+
 						echo '<div class="entry-content">';
 							truncate_post( 270 );
 						echo '</div>';
