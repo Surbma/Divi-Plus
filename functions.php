@@ -18,3 +18,13 @@ function divi_plus_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'divi_plus_widgets_init', 999 );
+
+function divi_plus_custom_strings( $translated_text, $text, $domain ) {
+	switch ( $translated_text ) {
+		case 'Oldal kiválasztása' :
+			$translated_text = 'Menü';
+			break;
+	}
+	return $translated_text;
+}
+add_filter( 'gettext', 'divi_plus_custom_strings', 20, 3 );
