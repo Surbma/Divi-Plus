@@ -5,6 +5,8 @@ __A Child Theme for the Divi Theme by Elegant Themes__
 
 **Child theme features:**
 
+- Show website name in header, if no logo is set.
+- New action hook just after the body tag (best place for GTM): divi_plus_body
 - Custom footer info text.
 - Custom 404 page with widgetized area.
 
