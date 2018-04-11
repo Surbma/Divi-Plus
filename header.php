@@ -207,26 +207,21 @@
 
 		<header id="main-header" data-height-onload="<?php echo esc_attr( et_get_option( 'menu_height', '66' ) ); ?>">
 			<div class="container clearfix et_menu_container">
-			<?php
-			$logo = et_get_option( 'divi_logo' );
-			if ( $logo != '' ) {
-			?>
 				<div class="logo_container">
 					<span class="logo_helper"></span>
+					<?php
+					$logo = et_get_option( 'divi_logo' );
+					if ( $logo != '' ) {
+					?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" id="logo" data-height-percentage="<?php echo esc_attr( et_get_option( 'logo_height', '54' ) ); ?>" />
 					</a>
-				</div>
-			<?php
-			}
-			else {
-			?>
-				<div class="title_container">
-					<h1>
+					<?php } else { ?>
+					<h1 id="logo">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></a>
 					</h1>
+					<?php } ?>
 				</div>
-			<?php } ?>
 				<div id="et-top-navigation" data-height="<?php echo esc_attr( et_get_option( 'menu_height', '66' ) ); ?>" data-fixed-height="<?php echo esc_attr( et_get_option( 'minimized_menu_height', '40' ) ); ?>">
 					<?php if ( ! $et_slide_header || is_customize_preview() ) : ?>
 						<nav id="top-menu-nav">
