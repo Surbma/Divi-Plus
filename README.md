@@ -9,6 +9,7 @@ __A Child Theme for the Divi Theme by Elegant Themes__
 - New action hook just after the body tag (best place for GTM): divi_plus_body
 - Custom footer info text.
 - Custom 404 page with widgetized area.
+- Responsive footer fix.
 
 **My plugins for Divi theme:**
 

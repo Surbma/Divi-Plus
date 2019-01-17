@@ -2,11 +2,11 @@
 /**
  * Fires after the main content, before the footer is output.
  *
- * @since ??
+ * @since 3.10
  */
 do_action( 'et_after_main_content' );
 
-if ( 'on' == et_get_option( 'divi_back_to_top', 'false' ) ) : ?>
+if ( 'on' === et_get_option( 'divi_back_to_top', 'false' ) ) : ?>
 
 	<span class="et_pb_scroll_top et-pb-icon"></span>
 
@@ -54,7 +54,7 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 
 					$divi_footer_credits = et_get_option( 'custom_footer_credits', '' );
 
-					$credits_format = '<p id="footer-info">%1$s</p>';
+					$credits_format = '<div id="footer-info">%1$s</div>';
 
 					if ( $disable_custom_credits ) {
 						$footer_credits = $divi_plus_footer_credits;
