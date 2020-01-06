@@ -52,7 +52,7 @@
 
 					<?php
 						et_divi_post_meta();
-						
+
 						echo '<div class="entry-content">';
 							truncate_post( 270 );
 						echo '</div>';
