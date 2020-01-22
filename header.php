@@ -156,6 +156,13 @@
 							get_search_query(),
 							esc_attr__( 'Search for:', 'Divi' )
 						);
+
+						/**
+						 * Fires inside the search form element, just before its closing tag.
+						 *
+						 * @since ??
+						 */
+						do_action( 'et_search_form_fields' );
 					?>
 					<button type="submit" id="searchsubmit_header"></button>
 				</form>
@@ -319,6 +326,13 @@
 							get_search_query(),
 							esc_attr__( 'Search for:', 'Divi' )
 						);
+
+						/**
+						 * Fires inside the search form element, just before its closing tag.
+						 *
+						 * @since ??
+						 */
+						do_action( 'et_search_form_fields' );
 					?>
 					</form>
 					<span class="et_close_search_field"></span>
