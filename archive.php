@@ -46,7 +46,7 @@ else {
 								$first_video
 							);
 						elseif ( 'gallery' === $post_format ) :
-							et_gallery_images();
+							et_pb_gallery_images();
 						elseif ( 'on' == et_get_option( 'divi_thumbnails_index', 'on' ) && '' !== $thumb  ) : ?>
 							<a href="<?php the_permalink(); ?>">
 								<?php print_thumbnail( $thumb, $thumbnail["use_timthumb"], $titletext, $width, $height ); ?>
