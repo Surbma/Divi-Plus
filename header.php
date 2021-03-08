@@ -27,7 +27,6 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php do_action( 'divi_plus_body' ); ?>
 <?php
 	wp_body_open();
 
